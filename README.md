@@ -3,9 +3,10 @@
 ## Project Description
 
 This project demonstrates a simple client-server network topology created using GNS3.
-The goal of the project is to configure a server and a client so the client can access a website hosted on the server.
+The goal of the project is to allow client machines to access a website hosted on a server.
 
-The server was first connected to a NAT network to download the required packages. After installing the packages, the NAT connection was removed and the server was connected directly to the client.
+At the beginning, the server was connected to a **NAT network** in order to install the required packages.
+After installing the packages, the NAT connection was removed and the server was connected directly to the clients in the network.
 
 ---
 
@@ -13,7 +14,21 @@ The server was first connected to a NAT network to download the required package
 
 ![Network Topology](<the project \&Screenshot for it/Network Topology.png>)
 
-This image shows the network topology created in GNS3 and how the server and client are connected.
+This image shows the network topology created in GNS3 and how the server and the clients are connected.
+
+---
+
+## Clients Used in the Project
+
+Two different clients were used to test the connection with the server:
+
+* **Ubuntu Client**
+  A Linux-based client with a **graphical interface (GUI)** used to access the website through a browser.
+
+* **VPCS Client**
+  A lightweight **command-line client** used to test network connectivity (such as ping and basic network configuration).
+
+Both clients were used to verify that the server can communicate correctly with different types of machines.
 
 ---
 
@@ -21,7 +36,7 @@ This image shows the network topology created in GNS3 and how the server and cli
 
 ![Server and Client](<the project \&Screenshot for it/server & client.png>)
 
-This screenshot shows the connection between the server and the client after configuring the network.
+This screenshot shows the configured connection between the server and the clients.
 
 ---
 
@@ -45,7 +60,7 @@ This screenshot shows the website running locally on the server.
 
 ![Website on Client](<the project \&Screenshot for it/the website on client.png>)
 
-This image shows that the client can successfully access the website hosted on the server.
+This image shows that the Ubuntu client successfully accessed the website hosted on the server.
 
 ---
 
@@ -53,7 +68,7 @@ This image shows that the client can successfully access the website hosted on t
 
 `web_test.gns3`
 
-This file contains the full network topology used in the project.
+This file contains the complete network topology used in the project.
 
 ---
 
@@ -62,12 +77,14 @@ This file contains the full network topology used in the project.
 1. Create the network topology in GNS3.
 2. Connect the server to NAT to install required packages.
 3. Disconnect the NAT network.
-4. Connect the server directly to the client.
+4. Connect the server to two clients (Ubuntu and VPCS).
 5. Run the web service on the server.
-6. Access the website from the client.
+6. Access the website from the Ubuntu client and test connectivity using VPCS.
 
 ---
 
 ## Result
 
-The client successfully accessed the website hosted on the server, confirming that the client-server communication works correctly.
+The clients were able to successfully communicate with the server.
+The Ubuntu client accessed the hosted website, while the VPCS client was used to verify network connectivity through command-line tools.
+
